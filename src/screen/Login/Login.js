@@ -5,72 +5,47 @@ import CustomInput from '../../components/CustomInput/CustomInput'
 
 let styles = require('./style');
 
-
-
-// const LoginScreen = (props) => {
-
-class LoginScreen extends Component {
-    constructor(props) {
-        super(props);
-        // this.state = { counter: '' };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.keyboardDidHide = this.keyboardDidHide.bind(this);
-    }
-
-    keyboardDidHide = () => {
+const LoginScreen = (props) => {
+    const keyboardDidHide = () => {
         Keyboard.dismiss()
     }
 
-    onChangeText = (key, value) => {
-        console.log("key",key)
-        console.log("value",value)
-      }
-
-    handleChange(event = {}) {
-        console.log("event.target && event.target.name", event.target && event.target.value)
+    const onChangeText = (key, value) => {
+        console.log("key1", key)
+        console.log("value1", value)
     }
-    render() {
 
-        return (
-            <KeyboardAvoidingView behavior="height" style={styles.MainContainer} onTouchMove={this.keyboardDidHide}>
-                <TouchableOpacity >
+    return (
+        <KeyboardAvoidingView behavior="height" style={styles.MainContainer} onTouchMove={keyboardDidHide}>
+            <TouchableOpacity >
 
-                    <ScrollView>
-                        <View style={styles.container}>
-
-                            <Text style={styles.heading}>Login</Text>
-
-                            <Text>Username</Text>
-                            <TextInput
-                                style={styles.input}
-                                id="username"
-                                name="username"
-                                onChangeText={val => this.onChangeText('username', val)}
-                            />
-
-                            <Text>Password </Text>
-                            <TextInput
-                                style={styles.input}
-                                id="password"
-                                name="password"
-                                // onChange={this.handleChange}
-                                onChangeText={val => this.onChangeText('password', val)}
-
-                            />
-
-                            <Button
-                                style={styles.button}
-                                title="submit"
-                                name="submit"
-                                // onPress={this.handleChange}
-                            />
-
-                        </View>
-                    </ScrollView>
-                </TouchableOpacity>
-            </KeyboardAvoidingView>
-        );
-    }
+                <ScrollView>
+                    <View style={styles.container}>
+                        <Text style={styles.heading}>Login</Text>
+                        <Text>Username</Text>
+                        <TextInput
+                            style={styles.input}
+                            id="username"
+                            name="username"
+                            onChangeText={val => onChangeText('username', val)}
+                        />
+                        <Text>Password </Text>
+                        <TextInput
+                            style={styles.input}
+                            id="password"
+                            name="password"
+                            onChangeText={val => onChangeText('password', val)}
+                        />
+                        <Button
+                            style={styles.button}
+                            title="submit"
+                            name="submit"
+                        // onPress={this.handleChange}
+                        />
+                    </View>
+                </ScrollView>
+            </TouchableOpacity>
+        </KeyboardAvoidingView>
+    );
 }
 export default LoginScreen;
