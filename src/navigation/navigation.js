@@ -4,7 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screen/Home/Home'
 import DetailsScreen from '../screen/Details/Details'
 import SplashScreen from '../screen/Splash/Splash'
-import SplashLogin from '../screen/Login/Login'
+import LoginScreen from '../screen/Login/Login'
+import MapScreen from '../screen/Maps/map'
 
 
 const Stack = createStackNavigator();
@@ -24,13 +25,18 @@ const Navigation = () => {
                 />
                 <Stack.Screen
                     name="login"
-                    component={SplashLogin}
+                    component={LoginScreen}
                     options={{ title: 'Login', headerShown: false }}
                 />
                 <Stack.Screen
                     name="details"
                     component={DetailsScreen}
                     options={{ title: 'Details', headerShown: false }}
+                />
+                <Stack.Screen
+                    name="map"
+                    component={MapScreen}
+                    options={{ title: 'Map', headerShown: false }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
