@@ -21,7 +21,7 @@ const MapScreen = (props) => {
         <Text>Map Screen</Text>
         <Button
           title="Go to Image"
-          onPress={() => props.navigation.navigate('login')}
+          onPress={() => props.navigation.navigate('image')}
         />
       </View>
     </View>

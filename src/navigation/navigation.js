@@ -6,6 +6,7 @@ import DetailsScreen from '../screen/Details/Details'
 import SplashScreen from '../screen/Splash/Splash'
 import LoginScreen from '../screen/Login/Login'
 import MapScreen from '../screen/Maps/map'
+import ImageScreen from '../screen/Image/Image'
 
 
 const Stack = createStackNavigator();
@@ -37,6 +38,11 @@ const Navigation = () => {
                     name="map"
                     component={MapScreen}
                     options={{ title: 'Map', headerShown: false }}
+                />
+                <Stack.Screen
+                    name="image"
+                    component={ImageScreen}
+                    options={{ title: 'Image', headerShown: false }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
