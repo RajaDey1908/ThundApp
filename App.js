@@ -2,6 +2,9 @@
 
 import React from 'react';
 import Navigation from './src/navigation/navigation'
+import { connect } from 'react-redux'
+import * as actionTypes from './src/redux/types/types'
+
 
 const App = () => {
   return (
@@ -10,5 +13,5 @@ const App = () => {
 }
 
 
-
-export default App;
+// export default connect()(App);
+export default App
