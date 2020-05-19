@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Component } from 'react';
 import { View, Text, TextInput, Button, KeyboardAvoidingView, Keyboard, TouchableOpacity, ScrollView } from 'react-native';
 import CustomInput from '../../components/CustomInput/CustomInput'
+import CustomHeading from '../../components/CustomHeading/CustomeHeading'
 
 import { connect } from 'react-redux'
 import * as actionTypes from '../../redux/actions/index'
@@ -47,8 +48,13 @@ class LoginScreen extends Component {
 
                     <ScrollView>
                         <View style={styles.container}>
-                            {console.log("props", this.props)}
-                            <Text style={styles.heading}>Login</Text>
+                            {/* {console.log("props", this.props)} */}
+                            <Text style={styles.heading}>Login f</Text>
+                            <CustomHeading >lteste</CustomHeading>
+                            <CustomInput
+                                style={styles.imputBackground}
+                                placeholder="tesCustomInput"
+                            />
                             <Text>Username   {this.props.username}</Text>
                             <TextInput
                                 style={styles.input}

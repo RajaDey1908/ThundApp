@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Dimensions} from 'react-native';
-import {StyleSheet, View, TextInput, Image} from 'react-native';
+import {StyleSheet, View, TextInput, Image, Text} from 'react-native';
 
 // let styles = require('./style');
-const CustomInput = (props) => {
+const CustomeHeading = (props) => {
   return (
     <View style={styles.inputWrapper}>
-      <TextInput
+      {/* <TextInput
           {...props}
-          style={[styles.input, props.style]}
           placeholder={props.placeholder}
           // secureTextEntry={this.props.secureTextEntry}
           // autoCorrect={this.props.autoCorrect}
@@ -17,13 +16,16 @@ const CustomInput = (props) => {
           // returnKeyType={this.props.returnKeyType}
           // placeholderTextColor="white"
           underlineColorAndroid="transparent"
-        />
+        /> */}
+        <Text {...props}        
+        style={[styles.heading, props.style]}
+        >{props.children}</Text>
     </View>
   );
 }
 
 
-CustomInput.propTypes = {
+CustomeHeading.propTypes = {
   source: PropTypes.number.isRequired,
   placeholder: PropTypes.string.isRequired,
   secureTextEntry: PropTypes.bool,
@@ -56,5 +58,9 @@ const styles = StyleSheet.create({
     left: 35,
     top: 9,
   },
+  heading: {
+    margin:5,
+    fontSize:20
+  },
 });
-export default CustomInput;
+export default CustomeHeading;

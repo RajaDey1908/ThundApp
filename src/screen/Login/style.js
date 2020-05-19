@@ -32,5 +32,8 @@ module.exports = StyleSheet.create({
     },
     button:{
         marginTop:10
+    },
+    imputBackground:{
+        backgroundColor: '#4e42f5'
     }
 });
