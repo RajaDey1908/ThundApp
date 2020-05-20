@@ -8,14 +8,24 @@ module.exports = StyleSheet.create({
     MainContainer: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#cfc9c9',
+        // backgroundColor: '#cfc9c9',
         justifyContent: 'center',
     },
     container: {
+        flex: 1,
         alignItems: 'center',
-        backgroundColor: '#cfc9c9',
+        // backgroundColor: '#cfc9c9',
         justifyContent: 'center',
     },
+    // container: {
+    //     flex: 1,
+    //     justifyContent: "center",
+    //     alignItems: "center"
+    //   },
+      backgroundImage: {
+        width: "100%",
+        flex: 1
+      },
     heading: {
         margin:5,
         fontSize:20
@@ -31,7 +41,8 @@ module.exports = StyleSheet.create({
         // color: '#ffffff',
     },
     button:{
-        marginTop:10
+        marginTop:10,
+        backgroundColor:'#29aaf4'
     },
     imputBackground:{
         backgroundColor: '#4e42f5'

@@ -1,7 +1,10 @@
 import React, { useEffect, useState, Component } from 'react';
-import { View, Text, TextInput, Button, KeyboardAvoidingView, Keyboard, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, KeyboardAvoidingView, Keyboard, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
 import CustomInput from '../../components/CustomInput/CustomInput'
 import CustomHeading from '../../components/CustomHeading/CustomeHeading'
+import CostomButton from '../../components/CustomButton/CostomButton'
+import backgroundImage from '../../assets/background.jpg';
+
 
 import { connect } from 'react-redux'
 import * as actionTypes from '../../redux/actions/index'
@@ -43,13 +46,12 @@ class LoginScreen extends Component {
        
 
         return (
-            <KeyboardAvoidingView behavior="height" style={styles.MainContainer} onTouchMove={this.keyboardDidHide}>
-                <TouchableOpacity >
-
+            <ImageBackground source={backgroundImage} style={styles.backgroundImage} >
+            {/* <KeyboardAvoidingView behavior="height" style={styles.MainContainer} onTouchMove={this.keyboardDidHide}> */}
                     <ScrollView>
                         <View style={styles.container}>
                             {/* {console.log("props", this.props)} */}
-                            <Text style={styles.heading}>Login f</Text>
+                            <Text style={styles.heading}>Login </Text>
                             <CustomHeading >lteste</CustomHeading>
                             <CustomInput
                                 style={styles.imputBackground}
@@ -72,16 +74,66 @@ class LoginScreen extends Component {
                                 name="password"
                                 onChangeText={val => onChangeText('password', val)}
                             />
-                            <Button
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                id="password"
+                                name="password"
+                                onChangeText={val => onChangeText('password', val)}
+                            />
+                            {/* <Button
                                 style={styles.button}
                                 title="submit"
                                 name="submit"
                             // onPress={this.handleChange}
-                            />
+                            /> */}
+                            <CostomButton
+                                 style={styles.button}
+                                // style="#29aaf4"
+                                // title="submit"
+                                // name="submit"
+                            // onPress={this.handleChange}
+                            >submit</CostomButton>
                         </View>
                     </ScrollView>
-                </TouchableOpacity>
-            </KeyboardAvoidingView>
+            {/* </KeyboardAvoidingView> */}
+            </ImageBackground>
+
         );
     }
 }
