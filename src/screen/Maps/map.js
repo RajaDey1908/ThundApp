@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
+    height: '100%',
+    width: '100%',
     justifyContent: 'flex-end',
     alignItems: 'center',
   },

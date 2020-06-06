@@ -20,5 +20,9 @@ module.exports = StyleSheet.create({
         textAlign: 'center',
         fontSize: 30,
         marginTop: 10,
-    }
+    },
+    backgroundImage: {
+        width: "100%",
+        flex: 1
+      },
 });

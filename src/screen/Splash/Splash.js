@@ -6,6 +6,8 @@ import {
     Image
 } from 'react-native';
 let styles = require('./style');
+import backgroundImage from '../../assets/beautiful-place.jpg';
+
 
 class Splash extends Component {
     constructor(props) {
@@ -18,10 +20,8 @@ class Splash extends Component {
     }
     render() {
         return (
-            <ImageBackground
-                style={styles.Container}
-                source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/crystal_background.jpg', }}
-            >
+            <ImageBackground source={backgroundImage} style={styles.backgroundImage} >
+
                 <View style={styles.MainContainer}>
                     <Image style={styles.ImageContainer} source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/logosmalltransparen.png' }}
                     />
