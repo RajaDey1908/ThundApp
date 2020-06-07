@@ -7,9 +7,13 @@ const HomeScreen = (props) => {
       <Text>Home Screen</Text>
       <Button
         title="Go to Login"
-        onPress={() => props.navigation.navigate('login')}
+        onPress={() => {
+          props.navigation.navigate("Drawer", {
+            screen: "Drawer1",
+          });
+        }}
       />
     </View>
   );
 }
-export default HomeScreen;
+export default HomeScreen; 
